@@ -1,0 +1,37 @@
+CXX = g++
+CXXFLAGS = \
+	-Wall \
+	-O3
+
+OBJDIR = obj
+SRCDIR = source
+BIN = 3dgen
+OBJ = \
+	$(OBJDIR)/Auswahl.o \
+	$(OBJDIR)/Vektor/Vektor.o \
+	$(OBJDIR)/base.o \
+	$(OBJDIR)/Bild3D.o \
+	$(OBJDIR)/StereoBild.o
+
+RES = $(OBJDIR)/resource.res
+
+$(BIN): $(OBJ)
+	$(CXX) -o $@ $^ `wx-config --libs`
+
+$(OBJDIR)/Auswahl.o: $(SRCDIR)/Auswahl.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ `wx-config --cxxflags`
+
+$(OBJDIR)/Vektor/Vektor.o: $(SRCDIR)/Vektor/Vektor.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ `wx-config --cxxflags`
+
+$(OBJDIR)/base.o: $(SRCDIR)/base.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ `wx-config --cxxflags`
+
+$(OBJDIR)/Bild3D.o: $(SRCDIR)/Bild3D.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ `wx-config --cxxflags`
+
+$(OBJDIR)/StereoBild.o: $(SRCDIR)/StereoBild.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ `wx-config --cxxflags`
+
+clean:
+	rm -f $(BIN) $(OBJ)

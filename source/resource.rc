@@ -1,0 +1,3 @@
+AppIcon ICON "Bilder/3DGenerator.ico"
+
+#include "wx/msw/wx.rc"

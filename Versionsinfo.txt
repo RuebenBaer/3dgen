@@ -1,0 +1,17 @@
+Version Alpha 1:
+- Bilder öffnen
+- Teilbilder mit der Maus verschieben
+- Seiten der Teilbilder tauschen
+- Fenster skalieren
+
+Version Alpha 2:
+- Bearbeiten-Menü hinzugefügt
+- Teilbilder in Graustufen wandeln (Durchschnitt)
+- Zwischen den Teilbildern wechseln
+- Menüpunkt zum Drehen der Teilbilder hinzugefügt
+- Setzen des Drehpunkts
+- Programm beendet nicht korrekt
+- Verschieben über die Tastatur (mit / ohne Shift)
+
+Version Alpha 3:
+...
